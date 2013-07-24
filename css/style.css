@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'Armata';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Armata"), local("Armata-Regular"), url(http://themes.googleusercontent.com/static/fonts/armata/v3/FG9R9aX-RIX_AvJI8USOWg.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Carrois Gothic SC';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Carrois Gothic SC"), local("CarroisGothicSC-Regular"), url(http://themes.googleusercontent.com/static/fonts/carroisgothicsc/v1/bVp4nhwFIXU-r3LqUR8DSNce8QJcbznVYyCETTx3XZM.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Inconsolata"), url(http://themes.googleusercontent.com/static/fonts/inconsolata/v6/BjAYBlHtW3CJxDcjzrnZCIbN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+html {
+  font-family: 'Armata', sans-serif;
+}
+
+body {
+  background-color: white;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Carrois Gothic SC', sans-serif;
+}
+
+.codeWrapper {
+  background-color: #2C2C2C;
+  padding: 3px 0;
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+  font-family: 'Inconsolata', 'Lucida Console', serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+}
+.codeWrapper code {
+  font-family: 'Inconsolata', 'Lucida Console', serif;
+  white-space: pre;
+  tab-size: 4;
+  font-weight: normal;
+  color: white;
+}
+.codeWrapper code .cssSelector {
+  color: #D89000;
+}
+.codeWrapper code .cssSelector .cssClass {
+  color: #f8fa83 !important;
+}
+.codeWrapper code .cssSpecial {
+  color: #D89000;
+}
+.codeWrapper code .cssAttr {
+  color: #b4ff72;
+}
+.codeWrapper code .cssAttrValue {
+  color: #b4ff72;
+}
+.codeWrapper code .cssInd {
+  color: #D89000;
+}
+.codeWrapper code .cssNum {
+  color: #73b2c4;
+}
+.codeWrapper code .cssBrack {
+  color: white;
+}
+.codeWrapper code .cssQuote {
+  color: #73b2c4;
+}
+.codeWrapper code .cssTab {
+  box-shadow: 12px 0px 1px -11px #888888 inset;
+}
+.codeWrapper code .cssComment {
+  color: #A9A9A9;
+}
+.codeWrapper code .cssComment * {
+  color: #A9A9A9;
+}
+.codeWrapper code .cssClass {
+  color: #f8fa83 !important;
+}
+.codeWrapper .codeType {
+  color: white;
+  float: right;
+  padding: 0px 20px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+.codeWrapper .codeCounter {
+  white-space: pre;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  color: white;
+  width: 28px;
+  padding-left: 5px;
+  margin-right: 10px;
+  color: #A9A9A9;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+.codeWrapper .copyButton {
+  position: absolute;
+  cursor: pointer;
+  padding: 3px;
+  right: 0;
+  bottom: 0;
+  background-color: lightgray;
+  border-radius: 10px 0px 0px 0px;
+  -webkit-border-radius: 10px 0px 0px 0px;
+  -moz-border-radius: 10px 0px 0px 0px;
+}
+
+.main-content {
+  margin-top: 100px;
+  height: auto !important;
+}
+
+.row .panel {
+  border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+}
+
+.hidden {
+  visible: none;
+  display: none;
+}

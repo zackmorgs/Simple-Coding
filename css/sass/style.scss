@@ -1,0 +1,151 @@
+@import "sassLibrary/libraries";
+
+@font-face {
+  font-family: 'Armata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Armata'), local('Armata-Regular'), url(http://themes.googleusercontent.com/static/fonts/armata/v3/FG9R9aX-RIX_AvJI8USOWg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Carrois Gothic SC';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Carrois Gothic SC'), local('CarroisGothicSC-Regular'), url(http://themes.googleusercontent.com/static/fonts/carroisgothicsc/v1/bVp4nhwFIXU-r3LqUR8DSNce8QJcbznVYyCETTx3XZM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata'), url(http://themes.googleusercontent.com/static/fonts/inconsolata/v6/BjAYBlHtW3CJxDcjzrnZCIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
+@mixin rounded-corners($topLeft: 10, $topRight: 10, $bottomRight: 10, $bottomLeft: 10) {
+	border-radius: #{$topLeft}px #{$topRight}px #{$bottomRight}px #{$bottomLeft}px;
+	-webkit-border-radius: #{$topLeft}px #{$topRight}px #{$bottomRight}px #{$bottomLeft}px;
+	-moz-border-radius: #{$topLeft}px #{$topRight}px #{$bottomRight}px #{$bottomLeft}px;
+}
+
+html {
+	// height: 100%;
+	font-family: 'Armata', sans-serif;
+}
+
+body {
+	background-color: white;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Carrois Gothic SC', sans-serif;
+}
+
+.codeWrapper {
+	background-color: #2C2C2C;
+	padding: 3px 0;
+	padding-left: 28px;
+	position: relative;
+	margin-bottom: 20px;
+	overflow-x: scroll;
+	font-family: 'Inconsolata', 'Lucida Console', serif;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 16px;
+	code {
+		font-family: 'Inconsolata', 'Lucida Console', serif;
+		white-space: pre;
+		tab-size: 4;
+		// color: #2BA6CB;
+		font-weight: normal;
+		color: white;
+		.cssSelector {
+			color: #D89000;
+			.cssClass {
+			color: #f8fa83 !important;
+		}
+		}
+		.cssSpecial {
+			color: #D89000;
+		}
+		.cssAttr {
+			// color: #a4c460;
+			color: #b4ff72;
+		}
+		.cssAttrValue {
+			color: #b4ff72;
+		}
+		.cssInd {
+			color: #D89000;
+		}
+		.cssNum {
+			color: #73b2c4;
+		}
+		.cssBrack {
+			color: white;
+		}
+		.cssQuote {
+			color: #73b2c4;
+		}
+		.cssTab {
+			box-shadow: 12px 0px 1px -11px #888888 inset;
+
+			// background-color: blue;
+		}
+		.cssComment {
+			color: #A9A9A9;
+			* {
+				color: #A9A9A9;
+			}
+		}
+		.cssClass {
+			color: #f8fa83 !important;
+		}
+	}
+	.codeType {
+		color: white;
+		float: right;
+		padding: 0px 20px;
+		@include unselectable();
+	}
+	.codeCounter {
+		white-space: pre;
+		position: absolute;
+		top: 3px;
+		left: 0;
+		color: white;
+		width: 28px;
+		padding-left: 5px;
+		margin-right: 10px;
+		color: #A9A9A9;
+		@include unselectable();
+	}
+	.copyButton {
+		position: absolute;
+		cursor: pointer;
+		padding: 3px;
+		right: 0;
+		bottom: 0;
+		background-color: lightgray;
+		@include rounded-corners(10, 0, 0, 0);
+	}
+}
+
+
+.panel {
+	// background-color: rgba(91, 91, 91, 0.8);
+	// border: 1px solid rgba(250, 255, 0, 0.4);
+}
+
+.main-content {
+	margin-top: 100px;
+	height: auto !important;
+}
+
+
+.row .panel {
+	@include rounded-corners(5, 5, 5, 5);
+}
+
+.hidden {
+	visible: none;
+	display: none;
+}

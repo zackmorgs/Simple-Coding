@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Smooth Code</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Armata|Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/style.css">
+  
+
+  <script src="js/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+  <div class="main-content row">
+
+<h1>Javascript Color Coder v0.31</h1>
+<p>Because things sounds cooler when you add a version number</p>
+<form class="changer">
+	<textarea rows='20' cols='20' placeholder="Type in me!" style="height: 200px"></textarea>
+</form>
+
+<code value="css">li {
+	transition: padding 0.2s;
+	-webkit-transition: padding 0.2s; /* Safari */
+	background-color-transform: 200px;
+	background-image: url('img/somePic.png');
+}
+div {
+	margin: 0 none;
+}
+span .special {
+	width: 100%; //This is commented out li
+	height: 10px;
+}
+</code>
+
+<p>We'll add more code areas for html, js, etc.</p>
+
+</div>
+
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/jquery' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="js/foundation.min.js"></script>
+  <!--
+  
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.alerts.js"></script>
+  
+  <script src="js/foundation/foundation.clearing.js"></script>
+  
+  <script src="js/foundation/foundation.cookie.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.joyride.js"></script>
+  
+  <script src="js/foundation/foundation.magellan.js"></script>
+  
+  <script src="js/foundation/foundation.orbit.js"></script>
+  
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  
+  <script src="js/foundation/foundation.topbar.js"></script>
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  -->
+  
+  <script>
+    $(document).foundation();
+  </script>
+  <script src="js/script.js"></script>
+  <script> 
+	//This is code only for this demo page.
+  	//All this code does is update the code in the box with the text
+  	//found in the textarea. So no touchy.
+	$(document).ready(function() {
+		runCodeParser(); //runs parser first time
+		$("textarea").keydown(function(e) {
+			  var $this, end, start;
+			  if (e.keyCode === 9) {
+			    start = this.selectionStart;
+			    end = this.selectionEnd;
+			    $this = $(this);
+			    $this.val($this.val().substring(0, start) + "\t" + $this.val().substring(end));
+			    this.selectionStart = this.selectionEnd = start + 1;
+			    return false;
+			  }
+			});
+		$("textarea").on("keyup", function() {
+			$(".codeWrapper code").html(this.value);
+			runCodeParser();
+		})
+		$(".codeWrapper").mouseenter(function() {
+			console.log("hit");
+        $(this).find(".copyButton").removeClass("hidden");
+      }).mouseleave(function() {
+      	$(this).find(".copyButton").addClass("hidden");
+      });
+	});
+</script>
+</body>
+</html>
